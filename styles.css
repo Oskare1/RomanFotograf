@@ -1,0 +1,309 @@
+
+/* Navigation menu */
+/* Navigation menu */
+.menu {
+  display: flex;               /* Align items in a row */
+  align-items: center;         /* Vertically center the logo and links */
+  justify-content: flex-start; /* Place the logo at the left */
+  width: 100%;                 /* Make the menu span the full width */
+  background-color: #000000;      /* Background color of the menu */
+  padding: 10px 20px;          /* Padding around the menu */
+}
+
+/* Styling for the logo */
+.menu .logo {
+  height: 50px;                /* Set the height of the logo */
+  margin-right: 20px;          /* Space between the logo and the links */
+}
+
+/* Centering the links in the menu */
+.menu-links {
+  display: flex;               /* Align the links in a row */
+  justify-content: center;     /* Center the links */
+  flex-grow: 1;                /* Allow links to take up remaining space */
+}
+
+.menu a {
+  color: #fff;                 /* White text color */
+  text-decoration: none;        /* Remove the underline */
+  padding: 10px 20px;           /* Space around the links */
+  margin: 0 10px;               /* Smaller margin to reduce spacing */
+  font-size: 16px;              /* Font size */
+  font-weight: bold;            /* Bold text */
+  text-transform: uppercase;    /* Uppercase text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+.menu a:hover {
+  background-color: #ffffff;    /* Background color on hover */
+  color: #000000;                  /* Text color on hover */
+  border-radius: 5px;           /* Rounded corners when hovered */
+}
+
+
+
+
+
+#Main-photo {background-image: url('Fotky/Roman\ place\ holder\ main\ photo.jpg'); 
+    background-size: cover; background-position: center; height: 100vh; display: flex; width: 100%;
+    justify-content: center; align-items: center; color: white; text-align: center; flex-direction: column;}
+
+   /* Pozadí fotka */
+   
+   #parallax  {
+    background: url("Fotky/Svatba.jpg") repeat fixed 100%;
+    background-size: cover; /* Makes the image cover the entire section */
+    height: 400px;
+   }
+   
+   
+   
+    /* bio */
+
+    #bio {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px; /* Increased height for better layout */
+      background-color: #f4f4f4; /* Softer background color */
+      border: 5px solid #333; /* Darker border for contrast */
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a soft shadow for depth */
+      font-family: 'Georgia', serif; /* Elegant font */
+      font-style: italic; /* Enhances the quote style */
+      font-size: 1.5rem; /* Larger text for readability */
+      line-height: 1.8; /* Improves text spacing */
+      color: #444; /* Softer black for text */
+      position: relative; /* For additional decoration */
+    }
+    
+    #bio::before, #bio::after {
+      content: '“'; /* Opening and closing quote marks */
+      font-size: 5rem; /* Makes them stand out */
+      color: #ccc; /* Light gray for subtlety */
+      position: absolute;
+      top: -30px; /* Adjust to position above the text */
+      left: 20px; /* Position for the opening quote */
+    }
+    
+    #bio::after {
+      content: '”';
+      right: 20px; /* Position for the closing quote */
+      left: unset; /* Reset left to avoid overlap */
+      top: unset; /* Reset top to avoid overlap */
+      bottom: -30px; /* Adjust to position below the text */
+    }
+    
+    
+/* Alba */
+      
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10vmin;
+  overflow: hidden;
+  transform: skew(5deg);
+
+  .card {
+    flex: 1;
+    transition: all 2s ease-in-out;
+    height: 75vmin;
+    position: relative;
+    .card__head {
+      color: black;
+      background: rgb(255, 255, 255);
+      padding: 0.5em;
+      transform: rotate(-90deg);
+      transform-origin: 0% 0%;
+      transition: all 0.5s ease-in-out;
+      min-width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 1em;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      flex-grow: 10;
+      img {
+        filter: grayscale(0);
+      }
+      .card__head {
+        text-align: center;
+        top: calc(100% - 2em);
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 2em;
+        transform: rotate(0deg) skew(-5deg);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 1s ease-in-out;
+      filter: grayscale(100%);
+    }
+    &:not(:nth-child(5)) {
+      margin-right: 1em;
+    }
+  }
+}
+
+
+/* Reference */
+
+    #reference {
+        text-align: center;
+        padding: 10px;
+        margin-top: 150px;
+      }
+      
+      .reference-grid {
+        display: flex;
+        gap: 0px; /* Bez mezery mezi obrázky */
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      
+      .reference-item {
+        width: 25%; /* Každá položka zabere čtvrtinu šířky pro 4 fotky vedle sebe */
+        box-sizing: border-box;
+        padding: 5px;
+      }
+      
+      .reference-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px; /* Lehce zaoblené rohy */
+      }
+      
+      .reference-item p {
+        margin-top: 5px;
+        font-style: italic;
+        color: #555;
+        font-size: 0.9em;
+      }
+      
+      .reference-item .author {
+        font-weight: bold;
+        color: #333;
+        font-size: 0.8em;
+      }
+      /* konec sekce a nyní Kontaktní formulář*/
+      
+      #contact-section {
+        display: flex; /* Umístí bloky vedle sebe */
+        justify-content: space-between; /* Přidá prostor mezi kontakty a formulářem */
+        max-width: 1000px; /* Maximální šířka sekce */
+        margin: 40px auto;
+        padding: 20px;
+      }
+      
+      #contact-info {
+        width: 40%; /* Šířka kontaktní sekce */
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      #contact-info h2 {
+        margin-bottom: 10px;
+        color: #333;
+        text-align: center;
+      }
+      
+      #contact-info p, #contact-info ul {
+        margin: 50px 0;
+        color: #555;
+      }
+      
+      #contact-info ul {
+        list-style: none; /* Odstraní odrážky u seznamu */
+        padding: 0;
+      }
+      
+      #contact-info li a {
+        color: #007bff; /* Barva odkazů */
+        text-decoration: none;
+      }
+      
+      #contact-info li a:hover {
+        text-decoration: underline; /* Podtržení při najetí myší */
+      }
+      
+      #contact-form {
+        width: 55%; /* Šířka kontaktního formuláře */
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      
+      #contact-form h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+      
+      #contact-form label {
+        display: block;
+        margin-top: 15px;
+        color: #555;
+        font-weight: bold;
+      }
+      
+      #contact-form input,
+      #contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+      
+      #contact-form button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      
+      #contact-form button:hover {
+        background-color: #0056b3;
+      }
+      /* ikona ig a fb */
+      .icon {
+        font-size: 2rem;
+        padding: 20px;
+        color: black; /* Change to your desired color */
+      }
+      
+      @import url('https://fonts.googleapis.com/css?family=Arvo');
+
+     /* Reset margin and padding for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+* {
+  box-sizing: border-box; 
+}
